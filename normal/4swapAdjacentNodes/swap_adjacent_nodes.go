@@ -1,4 +1,4 @@
-package str_print_reverse
+package swap_adjacent_nodes
 
 /**
  * Definition for singly-linked list.
