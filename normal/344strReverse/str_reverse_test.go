@@ -1,4 +1,4 @@
-package str_print_reverse
+package str_reverse
 
 import (
 	"testing"
