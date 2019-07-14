@@ -50,7 +50,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	l3 := &ListNode{}
 	currentNode := l3
 	carry := 0
-	for (l1 != nil || l2 != nil) {
+	for l1 != nil || l2 != nil {
 		sumNum := 0
 		if l1 == nil {
 			sumNum += l2.Val
