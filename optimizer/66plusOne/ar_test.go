@@ -27,7 +27,26 @@ func TestHello(t *testing.T) {
 
 ////时间最优
 ////国外1
-func plusOne(digits []int) []int {
+////国外2
+////国内3
+func plusOne3(digits []int) []int {
+	up:=1
+	i:=len(digits)-1
+	for up>0&&i>=0{
+		add:=digits[i]+up
+		digits[i]=add%10
+		up=add/10
+		i--
+	}
+	if up>0{
+		digits=append([]int{up},digits...)
+	}
+	return digits
+}
+////国内4
+////内存最优
+////国外5
+func plusOne5(digits []int) []int {
 	carry:=1
 	for i:=len(digits)-1; i >= 0  ; i-- {
 		digits[i]=digits[i]+carry
@@ -46,8 +65,8 @@ func plusOne(digits []int) []int {
 	}
 	return digits
 }
-////国外2
-func plusOne2(digits []int) []int {
+////国外6
+func plusOne6(digits []int) []int {
 	newDigits := make([]int, len(digits))
 	index := len(digits) - 1
 	overflow := 0
@@ -77,24 +96,5 @@ func plusOne2(digits []int) []int {
 	}
 	return newDigits
 }
-////国内3
-func plusOne3(digits []int) []int {
-	up:=1
-	i:=len(digits)-1
-	for up>0&&i>=0{
-		add:=digits[i]+up
-		digits[i]=add%10
-		up=add/10
-		i--
-	}
-	if up>0{
-		digits=append([]int{up},digits...)
-	}
-	return digits
-}
-////国内4
-////内存最优
-////国外5
-////国外6
 ////国内7
 ////国内8
