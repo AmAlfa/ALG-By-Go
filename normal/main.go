@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"regexp"
 )
 
 func main()  {
-	fmt.Println(7 / 2)
-	fmt.Println(7 % 2)
-	fmt.Println(math.Pow(2,1))
+	a := "A man, a plan, a canal: Panama"
+	reg := regexp.MustCompile(`[^0-9a-zA-Z]`)
+	fmt.Println(reg.ReplaceAllString(a, ""))
 }
