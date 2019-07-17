@@ -2,19 +2,22 @@ package main
 
 import (
 	"fmt"
-	"math/big"
+	"sort"
 )
 
 func main() {
-	a := "ahsj"
-	b := "ahsj"
-	fmt.Println(a == b)
-}
-
-func a(s *big.Int) *big.Int {
-	if s.Int64() == 1{
-		return big.NewInt(1)
-	}else{
-		return s.Mul(s,a(big.NewInt(s.Int64()-1)))
+	s := []int{2,6,4,8,10,9,15}
+	//1 3 21 25 36 44 321
+	fmt.Println(s)
+	numsTmp := make([]int, len(s))
+	copy(numsTmp, s)
+	sort.Ints(numsTmp)
+	fmt.Println(numsTmp)
+	result := 0
+	for i := 0; i < len(s); i++ {
+		if numsTmp[i] != s[i] {
+			result += 1
+		}
 	}
+	fmt.Println(result)
 }
