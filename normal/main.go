@@ -6,10 +6,9 @@ import (
 )
 
 func main() {
-	var i int64
-	for i=130;i > 0;i--{
-		fmt.Printf("%v => %v \n", i, a(big.NewInt(i)))
-	}
+	a := "ahsj"
+	b := "ahsj"
+	fmt.Println(a == b)
 }
 
 func a(s *big.Int) *big.Int {
