@@ -42,7 +42,7 @@ func threeSumClosest(nums []int, target int) int {
 
 	res := nums[0] + nums[1] + nums[2]
 
-	for i:=0;i<len(nums); i++ {
+	for i:=0; i<len(nums); i++ {
 		// 避免添加重复的结果
 		// i>0 是为了防止nums[i-1]溢出
 		if i > 0 && nums[i] == nums[i-1] {
@@ -63,7 +63,7 @@ func threeSumClosest(nums []int, target int) int {
 				} else {
 					d = res - target
 				}
-				if d> target -s {
+				if d > target -s {
 					res = s
 				}
 
